@@ -1,7 +1,8 @@
 if (jQuery) {
 	jQuery(document).ready(function($) {
 		// Move the expand/collapse all links outside of an individual comment and to bottom of widget
-		$('.c2c_edrc_all').detach().appendTo('#dashboard_recent_comments .inside').show();
+		var append_to = '#latest-comments';
+		$('.c2c_edrc_all').detach().appendTo(append_to).show();
 
 		// Handle click of link to toggle excerpt/full for individual comment
 		$('.c2c_edrc_more, .c2c_edrc_less').click(function(e) {
